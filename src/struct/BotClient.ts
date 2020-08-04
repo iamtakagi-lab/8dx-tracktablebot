@@ -1,4 +1,4 @@
-const { AkairoClient, CommandHandler } = require('discord-akairo')
+const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo')
 
 export default class BotClient extends AkairoClient {
     constructor() {
@@ -26,13 +26,27 @@ export default class BotClient extends AkairoClient {
                     retries: 5
                 },
                 modifyOtherwise: (msg: any, text: any) => `${msg.author}, ${text}`
-            }
+            },
+        });
+
+        this.listenerHandler = new ListenerHandler(this, {
+            directory: './src/listeners'
         });
 
         this.setup()
     }
 
     setup () {
+
+        this.commandHandler
+      .useListenerHandler(this.listenerHandler);
+
+    this.listenerHandler.setEmitters({
+      commandHandler: this.commandHandler,
+      listenerHandler: this.listenerHandler
+    });
+
+      this.listenerHandler.loadAll();
       this.commandHandler.loadAll();
     }
 
