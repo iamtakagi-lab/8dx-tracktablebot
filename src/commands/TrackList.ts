@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo')
 
-const track = require('../assets/track.json')
+import track from '../assets/track.json'
 
 export default class TrackList extends Command {
     constructor() {

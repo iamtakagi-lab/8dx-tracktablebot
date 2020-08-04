@@ -5,7 +5,7 @@ export default class BotClient extends AkairoClient {
         super({ownerID: '695218967173922866'})
 
         this.commandHandler = new CommandHandler(this, {
-            directory: './src/commands/',
+            directory: './dist/commands/',
             aliasReplacement: /-/g,
             prefix: '_',
             allowMention: true,
@@ -30,7 +30,7 @@ export default class BotClient extends AkairoClient {
         });
 
         this.listenerHandler = new ListenerHandler(this, {
-            directory: './src/listeners'
+            directory: './dist/listeners'
         });
 
         this.setup()
