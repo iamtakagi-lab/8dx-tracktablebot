@@ -1,9 +1,24 @@
-# mk8dx-tracktablebot
-MK8DX TrackTable Bot
+# 🗺 8dx-tracktablebot: Send the item table image for each course on discord.
 
-_tl : Track List
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/iam-takagi/8dx-tracktablebot)](https://github.com/iam-takagi/8dx-tracktablebot/releases)
+[![Check-PR](https://github.com/iamtakagi/8dx-tracktablebot/actions/workflows/check-pr.yml/badge.svg)](https://github.com/iamtakagi/8dx-tracktablebot/actions/workflows/check-pr.yml)
+[![Deploy](https://github.com/iamtakagi/8dx-tracktablebot/actions/workflows/deploy.yml/badge.svg)](https://github.com/iamtakagi/8dx-tracktablebot/actions/workflows/deploy.yml)
+[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/iamtakagi/8dx-tracktablebot)](https://hub.docker.com/r/iamtakagi/8dx-tracktablebot)
+[![Docker Pulls](https://img.shields.io/docker/pulls/iamtakagi/8dx-tracktablebot)](https://hub.docker.com/r/iamtakagi/8dx-tracktablebot)
+[![license](https://img.shields.io/github/license/iam-takagi/8dx-tracktablebot)](https://github.com/iam-takagi/8dx-tracktablebot/blob/master/LICENSE)
+[![issues](https://img.shields.io/github/issues/iam-takagi/8dx-tracktablebot)](https://github.com/iam-takagi/8dx-tracktablebot/issues)
+[![pull requests](https://img.shields.io/github/issues-pr/iam-takagi/8dx-tracktablebot)](https://github.com/iam-takagi/8dx-tracktablebot/pulls)
 
-_tt <trackName>: View Track
+## Commands
+- _tl Track List
+- _tt [trackName]: View Track
 
-https://discord.com/api/oauth2/authorize?client_id=714641356600901736&permissions=35840&scope=bot
-
+## Install
+`docker-compose.yml`
+```yml
+# TeamBot
+  tracktablebot:
+    container_name: 8dx-tracktablebot
+    image: iamtakagi/8dx-tracktablebot:latest
+    BOT_TOKEN: xxx
+```
