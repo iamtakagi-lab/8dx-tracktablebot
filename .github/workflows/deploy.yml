@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_BASE_NAME: iamtakagi/8dxtracktablebot
+  DOCKER_BASE_NAME: iamtakagi/8dx-tracktablebot
 
 jobs:
   build:
