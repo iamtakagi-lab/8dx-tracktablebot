@@ -16,7 +16,8 @@
 ## Install
 `docker-compose.yml`
 ```yml
-# TeamBot
+version: '3.8'
+services:
   tracktablebot:
     container_name: 8dx-tracktablebot
     image: iamtakagi/8dx-tracktablebot:latest
