@@ -1,6 +1,6 @@
 {
-  "name": "mk8dx-tracktablebot",
-  "version": "1.0.0",
+  "name": "8dx-tracktablebot",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
