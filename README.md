@@ -21,7 +21,8 @@ services:
   8dx-tracktablebot:
     container_name: 8dx-tracktablebot
     image: iamtakagi/8dx-tracktablebot:latest
-    BOT_TOKEN: xxx
+    environment:
+      BOT_TOKEN: xxx
 ```
 
 ## Start
